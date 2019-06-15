@@ -1,0 +1,34 @@
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\bin\Debug\Vista.exe.config
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\bin\Debug\Vista.exe
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\bin\Debug\Vista.pdb
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\bin\Debug\BibliotecaClases.dll
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\bin\Debug\BibliotecaClases.pdb
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\MainWindow.g.cs
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\App.g.cs
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista_MarkupCompile.cache
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista_MarkupCompile.lref
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\MainWindow.baml
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista.g.resources
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista.exe
+C:\Users\Hitachiin-Sama\Desktop\Proyecto Semestral\Subsidio - vistor\Vista\obj\Debug\Vista.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\bin\Debug\Vista.exe.config
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista.exe
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\bin\Debug\Vista.exe
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\bin\Debug\Vista.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\bin\Debug\BibliotecaClases.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\bin\Debug\BibliotecaClases.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\MainWindow.g.cs
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\App.g.cs
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista_MarkupCompile.cache
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista_MarkupCompile.lref
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\MainWindow.baml
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista.g.resources
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
