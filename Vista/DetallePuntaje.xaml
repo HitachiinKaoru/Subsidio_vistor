@@ -1,0 +1,42 @@
+﻿<Controls:MetroWindow x:Class="Vista.DetallePuntaje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        
+        xmlns:local="clr-namespace:Vista"
+        mc:Ignorable="d"
+        Title="Detalle Puntaje - MINVU" Height="744.219" Width="868.392" WindowStartupLocation="CenterScreen" Icon="Imagenes/MINVU01.png" ResizeMode="NoResize">
+    <Grid Margin="0,0,2.8,13.8">
+        <DataGrid x:Name="gvListarFiltro" HorizontalAlignment="Left" Margin="43,429,0,0" VerticalAlignment="Top" Height="220" Width="772"/>
+        <Label x:Name="label" Content="Rut Postulante:" HorizontalAlignment="Left" Margin="82,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBuscarPostulante" HorizontalAlignment="Left" Height="23" Margin="175,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
+        <Label x:Name="label1" Content="Beneficiado:" HorizontalAlignment="Left" Margin="98,149,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSi" Content="SI" HorizontalAlignment="Left" Margin="179,155,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <RadioButton x:Name="rbNo" Content="NO" HorizontalAlignment="Left" Margin="222,155,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="btnCalcular" Content="Calcular Puntaje" HorizontalAlignment="Left" Margin="175,73,0,0" VerticalAlignment="Top" Width="106" Click="btnCalcular_Click"/>
+        <Label x:Name="label2" Content="Detalle Puntaje" HorizontalAlignment="Left" Margin="620,42,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Carga" HorizontalAlignment="Left" Margin="547,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Ahorro" HorizontalAlignment="Left" Margin="542,124,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Título" HorizontalAlignment="Left" Margin="548,157,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Edad" HorizontalAlignment="Left" Margin="548,184,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="Pueblo Indigena" HorizontalAlignment="Left" Margin="489,212,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label8" Content="Estado Civil" HorizontalAlignment="Left" Margin="514,238,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9" Content="Región" HorizontalAlignment="Left" Margin="538,269,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCarga" HorizontalAlignment="Left" Height="23" Margin="604,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <TextBox x:Name="txtAhorro" HorizontalAlignment="Left" Height="23" Margin="604,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="604,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <TextBox x:Name="txtEdad" HorizontalAlignment="Left" Height="23" Margin="604,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <TextBox x:Name="txtIndigena" HorizontalAlignment="Left" Height="23" Margin="604,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <TextBox x:Name="txtEstadoCivil" HorizontalAlignment="Left" Height="23" Margin="604,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <TextBox x:Name="txtRegion" HorizontalAlignment="Left" Height="23" Margin="604,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <Label x:Name="label10" Content="Puntaje Final" HorizontalAlignment="Left" Margin="514,340,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTotal" HorizontalAlignment="Left" Height="23" Margin="604,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Text="0"/>
+        <Button x:Name="btnVolverDP" Content="Volver" HorizontalAlignment="Left" Margin="710,669,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverDP_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>
