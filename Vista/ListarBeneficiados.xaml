@@ -13,7 +13,7 @@
         Title="Listar Beneficiados - MINVU" Height="414.755" Width="868.392" WindowStartupLocation="CenterScreen" Icon="Imagenes/MINVU01.png" ResizeMode="NoResize">
     <Grid>
         <DataGrid x:Name="gvListado" HorizontalAlignment="Left" Margin="30,111,0,0" VerticalAlignment="Top" Height="245" Width="802" Initialized="gvListado_Initialized" />
-        <Button x:Name="btnVolverB" Content="Volver" HorizontalAlignment="Left" Margin="707,34,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverB_Click"/>
+        <Button x:Name="btnVolverB" Content="Volver" HorizontalAlignment="Left" Margin="707,34,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverB_Click" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label" Content="El listado a continuación muestra los Beneficiados con el Subsidio para la Vivienda Nuva o Usada" HorizontalAlignment="Left" Margin="30,34,0,0" VerticalAlignment="Top"/>
 
     </Grid>

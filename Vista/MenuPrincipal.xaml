@@ -12,9 +12,10 @@
         mc:Ignorable="d"
         Title="Menu Principal Subsidio - MINVU" Height="572.297" Width="673.441" WindowStartupLocation="CenterScreen" Icon="Imagenes/MINVU01.png" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="btnBeneficiados" Content="Beneficiados" HorizontalAlignment="Left" Margin="473,185,0,0" VerticalAlignment="Top" Width="91" Height="25" Click="btnBeneficiados_Click"/>
-        <Button x:Name="btnPuntaje" Content="Detalle Puntaje" HorizontalAlignment="Left" Margin="261,185,0,0" VerticalAlignment="Top" Width="118" Height="25" Click="btnPuntaje_Click"/>
-        <Button x:Name="btnPostular" Content="Postular" HorizontalAlignment="Left" Margin="93,185,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="btnPostular_Click"/>
+        <Button x:Name="btnBeneficiados" Content="Beneficiados" HorizontalAlignment="Left" Margin="473,185,0,0" VerticalAlignment="Top" Width="91" Height="25" Click="btnBeneficiados_Click" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnPuntaje" Content="Detalle Puntaje" HorizontalAlignment="Left" Margin="261,185,0,0" VerticalAlignment="Top" Width="118" Height="25" Click="btnPuntaje_Click" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnPostular" Content="Postular" HorizontalAlignment="Left" Margin="93,185,0,0" VerticalAlignment="Top" Width="85" Height="25" Click="btnPostular_Click" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="306" Margin="156,226,0,0" VerticalAlignment="Top" Width="310" Source="Imagenes/casa.jpg"/>
 
     </Grid>
 </Controls:MetroWindow>

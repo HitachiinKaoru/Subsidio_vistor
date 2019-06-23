@@ -16,9 +16,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="btnGrabar" Content="Grabar" HorizontalAlignment="Left" Margin="201,651,0,0" VerticalAlignment="Top" Width="117" Click="btnGrabar_Click"/>
-        <Button x:Name="btnDetalle" Content="Detalle Puntalle" HorizontalAlignment="Left" Margin="533,389,0,0" VerticalAlignment="Top" Width="119" Click="btnDetalle_Click"/>
-        <Button x:Name="btnVolverP" Content="Volver" HorizontalAlignment="Left" Margin="557,651,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverP_Click"/>
+        <Button x:Name="btnGrabar" Content="Grabar" HorizontalAlignment="Left" Margin="201,651,0,0" VerticalAlignment="Top" Width="117" Click="btnGrabar_Click"  Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnDetalle" Content="Detalle Puntalle" HorizontalAlignment="Left" Margin="533,389,0,0" VerticalAlignment="Top" Width="119" Click="btnDetalle_Click" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnVolverP" Content="Volver" HorizontalAlignment="Left" Margin="557,651,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverP_Click" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <Label x:Name="label" Content="Datos de Postulante" HorizontalAlignment="Left" Margin="65,29,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
         <Label x:Name="label1" Content="Rut:" HorizontalAlignment="Left" Margin="95,80,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Nombres:" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top"/>

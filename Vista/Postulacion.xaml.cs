@@ -204,7 +204,7 @@ namespace Vista
                 cmd.ExecuteNonQuery();
 
                
-                bool resp = true; //postulante.Grabar();
+                bool resp = false; //postulante.Grabar();
                 await this.ShowMessageAsync("Mensaje:",
                       string.Format(resp ? "Postulación Guardada" : "No se guardo la Postulación"));
 
