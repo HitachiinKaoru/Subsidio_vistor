@@ -10,11 +10,57 @@
         
         xmlns:local="clr-namespace:Vista"
         mc:Ignorable="d"
-        Title="Postulacion Subsidio - MINVU" Height="726.219" Width="868.392" WindowStartupLocation="CenterScreen" Icon="Imagenes/MINVU01.png" ResizeMode="NoResize">
-    <Grid>
-        <Button x:Name="btnGrabar" Content="Grabar" HorizontalAlignment="Left" Margin="210,634,0,0" VerticalAlignment="Top" Width="75" Click="btnGrabar_Click"/>
-        <Button x:Name="btnDetalle" Content="Detalle Puntalle" HorizontalAlignment="Left" Margin="391,634,0,0" VerticalAlignment="Top" Width="119" Click="btnDetalle_Click"/>
-        <Button x:Name="btnVolverP" Content="Volver" HorizontalAlignment="Left" Margin="721,634,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverP_Click"/>
+        Title="Postulacion Subsidio - MINVU" Height="801.295" Width="819.769" WindowStartupLocation="CenterScreen" Icon="Imagenes/MINVU01.png" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,4">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnGrabar" Content="Grabar" HorizontalAlignment="Left" Margin="201,651,0,0" VerticalAlignment="Top" Width="117" Click="btnGrabar_Click"/>
+        <Button x:Name="btnDetalle" Content="Detalle Puntalle" HorizontalAlignment="Left" Margin="533,389,0,0" VerticalAlignment="Top" Width="119" Click="btnDetalle_Click"/>
+        <Button x:Name="btnVolverP" Content="Volver" HorizontalAlignment="Left" Margin="557,651,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverP_Click"/>
+        <Label x:Name="label" Content="Datos de Postulante" HorizontalAlignment="Left" Margin="65,29,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <Label x:Name="label1" Content="Rut:" HorizontalAlignment="Left" Margin="95,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Nombres:" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Apellidos:" HorizontalAlignment="Left" Margin="64,154,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Fecha Nacimiento:" HorizontalAlignment="Left" Margin="18,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Genero:" HorizontalAlignment="Left" Margin="73,337,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Estado Civil:" HorizontalAlignment="Left" Margin="51,373,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="Nacionalidad:" HorizontalAlignment="Left" Margin="43,413,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label8" Content="Titulo:" HorizontalAlignment="Left" Margin="75,452,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9" Content="Tipo Titulo:" HorizontalAlignment="Left" Margin="55,487,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label10" Content="Pueblo Originario:" HorizontalAlignment="Left" Margin="18,523,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label11" Content="Región:" HorizontalAlignment="Left" Margin="69,554,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label13" Content="Monto Ahorrado:" HorizontalAlignment="Left" Margin="450,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label12" Content="Tipo Vivienda:" HorizontalAlignment="Left" Margin="468,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label14" Content="Valor Vivienda:" HorizontalAlignment="Left" Margin="464,154,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Datos de Vivienda" HorizontalAlignment="Left" Margin="470,29,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="txtRut" HorizontalAlignment="Left" Height="23" Margin="130,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="23" Margin="131,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Height="23" Margin="131,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
+        <DatePicker x:Name="dpFechaNac" HorizontalAlignment="Left" Margin="131,189,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbGenero" HorizontalAlignment="Left" Margin="130,338,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbEstadoCivil" HorizontalAlignment="Left" Margin="130,373,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbNacionalidad" HorizontalAlignment="Left" Margin="130,412,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbTipoTitulo" HorizontalAlignment="Left" Margin="130,487,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="130,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbIndigena" HorizontalAlignment="Left" Margin="130,523,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbRegion" HorizontalAlignment="Left" Margin="131,559,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMontoAhorro" HorizontalAlignment="Left" Height="23" Margin="552,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbTipoVivienda" HorizontalAlignment="Left" Margin="554,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtValorVivienda" HorizontalAlignment="Left" Height="23" Margin="557,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Grid x:Name="gPuntaje" HorizontalAlignment="Left" Height="136" Margin="500,240,0,0" VerticalAlignment="Top" Width="179">
+            <Image x:Name="ingPuntaje" HorizontalAlignment="Left" Height="141" Margin="29,10,-68,-15" VerticalAlignment="Top" Width="218" Source="Imagenes/puntaje.jpg"/>
+        </Grid>
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="23" Margin="131,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label4_Copy" Content="Telefono:" HorizontalAlignment="Left" Margin="62,226,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="131,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
+        <Label x:Name="label4_Copy1" Content="Correo:" HorizontalAlignment="Left" Margin="62,263,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label15" Content="Direccion:" HorizontalAlignment="Left" Margin="57,306,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Height="23" Margin="131,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
+        <CheckBox x:Name="chbPueblo" Content="Si" HorizontalAlignment="Left" Margin="475,530,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labeldd" Content="¿Pertenece a un pueblo Indigena?" HorizontalAlignment="Left" Margin="282,523,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Controls:MetroWindow>

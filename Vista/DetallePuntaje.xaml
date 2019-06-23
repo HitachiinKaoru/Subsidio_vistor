@@ -18,7 +18,7 @@
         <Label x:Name="label1" Content="Beneficiado:" HorizontalAlignment="Left" Margin="98,149,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbSi" Content="SI" HorizontalAlignment="Left" Margin="179,155,0,0" VerticalAlignment="Top" IsEnabled="False"/>
         <RadioButton x:Name="rbNo" Content="NO" HorizontalAlignment="Left" Margin="222,155,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <Button x:Name="btnCalcular" Content="Calcular Puntaje" HorizontalAlignment="Left" Margin="175,73,0,0" VerticalAlignment="Top" Width="106" Click="btnCalcular_Click"/>
+        <Button x:Name="btnCalcular" Content="Calcular Puntaje" HorizontalAlignment="Left" Margin="175,73,0,0" VerticalAlignment="Top" Width="135" Click="btnCalcular_Click"/>
         <Label x:Name="label2" Content="Detalle Puntaje" HorizontalAlignment="Left" Margin="620,42,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label3" Content="Carga" HorizontalAlignment="Left" Margin="547,93,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label4" Content="Ahorro" HorizontalAlignment="Left" Margin="542,124,0,0" VerticalAlignment="Top"/>

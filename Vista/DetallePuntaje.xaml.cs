@@ -32,7 +32,9 @@ namespace Vista
     {
         ConexionOracle Oracle = new ConexionOracle();
         OracleConnection Cone = new OracleConnection();
+
         Postulante pos = new Postulante();
+
         public DetallePuntaje()
         {
             InitializeComponent();
@@ -40,69 +42,171 @@ namespace Vista
 
         private async void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            if (txtBuscarPostulante.Text != null)
+            try
             {
-                string rut = txtBuscarPostulante.Text;
-                
-                Cone = Oracle.abrirConexion(); 
-
-                OracleCommand cmd = new OracleCommand("FN_LISTAR_TODO (rut string)", Cone);
-                cmd.CommandType = CommandType.StoredProcedure;
-                List<Postulante> listaBeneficiados = new List<Postulante>();
-
-                OracleParameter copia_cursor = cmd.Parameters.Add("L_TODO", OracleDbType.RefCursor); // es igual a %rowtype
-                copia_cursor.Direction = ParameterDirection.ReturnValue;
-                cmd.ExecuteNonQuery();
-
-                OracleDataReader info_leida = ((OracleRefCursor)copia_cursor.Value).GetDataReader(); //lo parseamos a cursor, por los distintos tipo de datos que contiene
-                while (info_leida.Read())
+                if (txtBuscarPostulante.Text.Length > 0)
                 {
-                    //rescatamos
-                    Postulante pos = new Postulante();
-                    pos.Rut = info_leida.GetString(0);
-                    pos.Nombre = info_leida.GetString(1);
-                    pos.Edad = info_leida.GetInt32(2);
-                    pos.PuntjEdad = info_leida.GetInt32(3);
-                    pos.CantCargas = info_leida.GetInt32(4);
-                    pos.PuntjCargas = info_leida.GetInt32(5);
-                    pos.EstadoCivil = info_leida.GetString(6);
-                    pos.PuntjCivil = info_leida.GetInt32(7);
-                    pos.PuebloIndigena = info_leida.GetString(8);
-                    pos.PuntjIndigena = info_leida.GetInt32(9);
-                    pos.MontoAhorrado = info_leida.GetString(10);
-                    pos.PuntjAhorro = info_leida.GetInt32(11);
-                    pos.Titulo = info_leida.GetString(12);
-                    pos.PuntjTitulo = info_leida.GetInt32(13);
-                    pos.Region = info_leida.GetString(14);
-                    pos.PuntjRegion = info_leida.GetInt32(15);
-                    pos.TipoVivienda = info_leida.GetString(16);
-                    pos.ValorVivienda = info_leida.GetString(17);
-                    pos.PuntjTotal = info_leida.GetInt32(18);
 
 
-                    //agregamos a la lista
-                    listaBeneficiados.Add(pos);
+                    Cone = Oracle.abrirConexion();
+
+                    OracleCommand cmd = new OracleCommand("FN_LISTAR_TODO", Cone);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    List<Postulante> listaBeneficiados = new List<Postulante>();
+
+                    OracleParameter rut = new OracleParameter("rut", OracleDbType.Varchar2);
+                    rut.Direction = ParameterDirection.Input;
+                    rut.Value = txtBuscarPostulante.Text;
+
+                    OracleParameter copia_cursor = cmd.Parameters.Add("L_BUSCAR", OracleDbType.RefCursor); // es igual a %rowtype
+                    copia_cursor.Direction = ParameterDirection.ReturnValue;
+
+                    cmd.Parameters.Add(rut); //añade la variable de entrada
+                    cmd.ExecuteNonQuery();
+
+                    OracleDataReader info_leida = ((OracleRefCursor)copia_cursor.Value).GetDataReader(); //lo parseamos a cursor, por los distintos tipo de datos que contiene
+                    while (info_leida.Read())
+                    {
+                        //rescatamos
+                        Postulante pos = new Postulante();
+                        pos.Rut = info_leida.GetString(0);
+                        pos.Nombre = info_leida.GetString(1);
+                        pos.Edad = info_leida.GetInt32(2);
+                        pos.PuntjEdad = info_leida.GetInt32(3);
+                        pos.CantCargas = info_leida.GetInt32(4);
+                        pos.PuntjCargas = info_leida.GetInt32(5);
+                        pos.EstadoCivil = info_leida.GetString(6);
+                        pos.PuntjCivil = info_leida.GetInt32(7);
+                        pos.PuebloIndigena = info_leida.GetString(8);
+                        pos.PuntjIndigena = info_leida.GetInt32(9);
+                        pos.MontoAhorrado = info_leida.GetString(10);
+                        pos.PuntjAhorro = info_leida.GetInt32(11);
+                        pos.Titulo = info_leida.GetString(12);
+                        pos.PuntjTitulo = info_leida.GetInt32(13);
+                        pos.Region = info_leida.GetString(14);
+                        pos.PuntjRegion = info_leida.GetInt32(15);
+                        pos.TipoVivienda = info_leida.GetString(16);
+                        pos.ValorVivienda = info_leida.GetString(17);
+                        pos.PuntjTotal = info_leida.GetInt32(18);
+
+                        txtAhorro.Text = info_leida.GetInt32(11).ToString();
+                        txtCarga.Text = info_leida.GetInt32(5).ToString();
+                        txtEdad.Text = info_leida.GetInt32(3).ToString();
+                        txtEstadoCivil.Text = info_leida.GetInt32(7).ToString();
+                        txtIndigena.Text = info_leida.GetInt32(9).ToString();
+                        txtRegion.Text = info_leida.GetInt32(15).ToString();
+                        txtTitulo.Text = info_leida.GetInt32(13).ToString();
+                        txtTotal.Text = info_leida.GetInt32(18).ToString();
+                        //agregamos a la lista
+                        listaBeneficiados.Add(pos);
+                    }
+
+                    gvListarFiltro.ItemsSource = listaBeneficiados;
+                    
+                    
+                    
+
                 }
-
-                gvListarFiltro.ItemsSource = listaBeneficiados;
-                txtAhorro.Text = pos.PuntjAhorro.ToString();
-                txtCarga.Text = pos.PuntjCargas.ToString();
-                txtEdad.Text = pos.PuntjEdad.ToString();
-                txtEstadoCivil.Text = pos.PuntjCivil.ToString();
-                txtIndigena.Text = pos.PuntjIndigena.ToString();
-                txtRegion.Text = pos.PuntjRegion.ToString();
-                txtTitulo.Text = pos.PuntjTitulo.ToString();
-                txtTotal.Text = pos.PuntjTotal.ToString();
+                else
+                {
+                    txtAhorro.Clear();
+                    txtCarga.Clear();
+                    txtEdad.Clear();
+                    txtEstadoCivil.Clear();
+                    txtIndigena.Clear();
+                    txtRegion.Clear();
+                    txtTitulo.Clear();
+                    txtTotal.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                await this.ShowMessageAsync("Mensaje:",
+                      string.Format("Error al Buscar el Postulante"));
+                
 
             }
 
         }
 
-      
-
-        private Task ShowMessageAsync(string v1, string v2)
+        public DetallePuntaje(Postulacion origen)
         {
-            throw new NotImplementedException();
+            InitializeComponent();
+
+            try
+            {
+                
+                    if (txtBuscarPostulante.Text != null)
+                    {
+
+
+                        Cone = Oracle.abrirConexion();
+
+                        OracleCommand cmd = new OracleCommand("FN_LISTAR_TODO", Cone);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        List<Postulante> listaBeneficiados = new List<Postulante>();
+
+
+                        OracleParameter copia_cursor = cmd.Parameters.Add("L_TODO", OracleDbType.RefCursor); // es igual a %rowtype
+                        copia_cursor.Direction = ParameterDirection.ReturnValue;
+
+                        OracleParameter rut = new OracleParameter("rut", OracleDbType.Varchar2);
+                        rut.Direction = ParameterDirection.Input;
+                        rut.Value = txtBuscarPostulante.Text;
+
+                        cmd.ExecuteNonQuery();
+
+                        OracleDataReader info_leida = ((OracleRefCursor)copia_cursor.Value).GetDataReader(); //lo parseamos a cursor, por los distintos tipo de datos que contiene
+                        while (info_leida.Read())
+                        {
+                            //rescatamos
+                            Postulante pos = new Postulante();
+                            pos.Rut = info_leida.GetString(0);
+                            pos.Nombre = info_leida.GetString(1);
+                            pos.Edad = info_leida.GetInt32(2);
+                            pos.PuntjEdad = info_leida.GetInt32(3);
+                            pos.CantCargas = info_leida.GetInt32(4);
+                            pos.PuntjCargas = info_leida.GetInt32(5);
+                            pos.EstadoCivil = info_leida.GetString(6);
+                            pos.PuntjCivil = info_leida.GetInt32(7);
+                            pos.PuebloIndigena = info_leida.GetString(8);
+                            pos.PuntjIndigena = info_leida.GetInt32(9);
+                            pos.MontoAhorrado = info_leida.GetString(10);
+                            pos.PuntjAhorro = info_leida.GetInt32(11);
+                            pos.Titulo = info_leida.GetString(12);
+                            pos.PuntjTitulo = info_leida.GetInt32(13);
+                            pos.Region = info_leida.GetString(14);
+                            pos.PuntjRegion = info_leida.GetInt32(15);
+                            pos.TipoVivienda = info_leida.GetString(16);
+                            pos.ValorVivienda = info_leida.GetString(17);
+                            pos.PuntjTotal = info_leida.GetInt32(18);
+
+
+                            //agregamos a la lista
+                            listaBeneficiados.Add(pos);
+                        }
+
+                        gvListarFiltro.ItemsSource = listaBeneficiados;
+                        txtAhorro.Text = pos.PuntjAhorro.ToString();
+                        txtCarga.Text = pos.PuntjCargas.ToString();
+                        txtEdad.Text = pos.PuntjEdad.ToString();
+                        txtEstadoCivil.Text = pos.PuntjCivil.ToString();
+                        txtIndigena.Text = pos.PuntjIndigena.ToString();
+                        txtRegion.Text = pos.PuntjRegion.ToString();
+                        txtTitulo.Text = pos.PuntjTitulo.ToString();
+                        txtTotal.Text = pos.PuntjTotal.ToString();
+
+                    }
+
+
+            }
+            catch (Exception exa)
+            {
+
+                MessageBox.Show("Error!" + exa.Message);
+            }
+            
         }
 
         private void btnVolverDP_Click(object sender, RoutedEventArgs e)

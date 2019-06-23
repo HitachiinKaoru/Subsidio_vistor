@@ -14,6 +14,7 @@
     <Grid>
         <DataGrid x:Name="gvListado" HorizontalAlignment="Left" Margin="30,111,0,0" VerticalAlignment="Top" Height="245" Width="802" Initialized="gvListado_Initialized" />
         <Button x:Name="btnVolverB" Content="Volver" HorizontalAlignment="Left" Margin="707,34,0,0" VerticalAlignment="Top" Width="75" Click="btnVolverB_Click"/>
+        <Label x:Name="label" Content="El listado a continuación muestra los Beneficiados con el Subsidio para la Vivienda Nuva o Usada" HorizontalAlignment="Left" Margin="30,34,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Controls:MetroWindow>

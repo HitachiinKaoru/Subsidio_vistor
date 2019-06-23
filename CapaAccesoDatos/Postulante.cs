@@ -12,6 +12,10 @@ using Conexion;
 
 namespace CapaAccesoDatos
 {
+    public enum TipoTitulo
+    {
+       TECNICO, PROFESIONAL, NINGUNO
+    }
     public class Postulante
     {
         private ConexionOracle Oracle { get; set; }
@@ -358,7 +362,7 @@ namespace CapaAccesoDatos
                     //agregamos a la lista
                     listaBeneficiados.Add(pos);
                 }
-
+                
                 //9)
                 //cargamos la grilla con los datos de la lista
                return listaBeneficiados;
@@ -370,7 +374,9 @@ namespace CapaAccesoDatos
             }
         }
 
-        
+       
     }
+    
+    
 }
 
