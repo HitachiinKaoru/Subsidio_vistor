@@ -3,3 +3,4 @@ C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Conexion\bin\Debug\Cone
 C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Conexion\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Conexion\obj\Debug\Conexion.dll
 C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Conexion\obj\Debug\Conexion.pdb
+C:\Users\Hitachiin-Sama\Documents\GitHub\Subsidio_vistor\Conexion\obj\Debug\Conexion.csprojResolveAssemblyReference.cache
